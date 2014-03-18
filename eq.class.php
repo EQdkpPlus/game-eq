@@ -22,21 +22,72 @@ if ( !defined('EQDKP_INC') ){
 
 if(!class_exists('eq')) {
 	class eq extends game_generic {
-		public static $shortcuts = array();
+		public $version			= '2.1.2';
 		protected $this_game	= 'eq';
 		protected $types		= array('classes', 'races', 'factions', 'filters');
-		public $icons			= array('classes', 'classes_big', 'races');
 		protected $classes		= array();
 		protected $races		= array();
 		protected $factions		= array();
 		protected $filters		= array();
 		public $langs			= array('english');
 
+		protected $class_dependencies = array(
+			array(
+				'name'		=> 'faction',
+				'type'		=> 'factions',
+				'admin' 	=> true,
+				'decorate'	=> false,
+				'parent'	=> false,
+			),
+			array(
+				'name'		=> 'race',
+				'type'		=> 'races',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'parent'	=> array(
+					'faction' => array(
+						'good'		=> 'all',
+						'evil'		=> 'all',
+					),
+				),
+			),
+			array(
+				'name'		=> 'class',
+				'type'		=> 'classes',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'primary'	=> true,
+				'colorize'	=> true,
+				'roster'	=> true,
+				'recruitment' => true,
+				'parent'	=> array(
+					'race' => array(
+						0 	=> 'all',		// Unknown
+						1 	=> 'all',		// Gnome
+						2 	=> 'all',		// Human
+						3 	=> 'all',		// Barbarian
+						4 	=> 'all',		// Dwarf
+						5 	=> 'all',		// High Elf
+						6 	=> 'all',		// Dark Elf
+						7 	=> 'all',		// Wood Elf
+						8 	=> 'all',		// Half Elf
+						9 	=> 'all',,		// Vah Shir
+						10 	=> 'all',		// Troll
+						11 	=> 'all',		// Ogre
+						12 	=> 'all',		// Frog
+						13 	=> 'all',		// Iksar
+						14 	=> 'all',		// Erudite
+						15 	=> 'all',		// Halfling
+						16 	=> 'all',		// Drakkin
+					),
+				),
+			),
+		);
+
 		protected $glang		= array();
 		protected $lang_file	= array();
 		protected $path			= '';
 		public  $lang			= false;
-		public $version	= '2.1.2';
 
 		/**
 		* Returns Information to change the game
@@ -45,10 +96,7 @@ if(!class_exists('eq')) {
 		* @return array
 		*/
 		public function get_OnChangeInfos($install=false){
-		
-		$info = array();
-		
-			return $info;
+
 		}
 
 		/**
@@ -73,5 +121,4 @@ if(!class_exists('eq')) {
 		}
 	}
 }
-if(version_compare(PHP_VERSION, '5.3.0', '<')) registry::add_const('short_eq', eq::$shortcuts);
 ?>

@@ -16,60 +16,59 @@
  * $Id$
  */
 
-if ( !defined('EQDKP_INC') )
-{
+if ( !defined('EQDKP_INC') ){
     header('HTTP/1.0 404 Not Found');
     exit;
 }
 $english_array = array(
 	'classes' => array(
-		0 => 'Unknown',
-		1 => 'Bard',
-		2 => 'Beastlord',
-		3 => 'Berserker',
-		15 => 'Cleric',
-		16 => 'Druid',
-		4 => 'Enchanter',
-		5 => 'Magician',
-		6 => 'Monk',
-		7 => 'Necromancer',
-		8 => 'Paladin',
-		9 => 'Ranger',
-		10 => 'Rogue',
-		11 => 'Shadow Knight',
-		12 => 'Shaman',
-		13 => 'Warrior',
-		14 => 'Wizard',  //note: new classes need to be added as last spot, else the id => class assignment gets messed up in already existing systems
+		0	=> 'Unknown',
+		1	=> 'Bard',
+		2	=> 'Beastlord',
+		3	=> 'Berserker',
+		4	=> 'Enchanter',
+		5	=> 'Magician',
+		6	=> 'Monk',
+		7	=> 'Necromancer',
+		8	=> 'Paladin',
+		9	=> 'Ranger',
+		10	=> 'Rogue',
+		11	=> 'Shadow Knight',
+		12	=> 'Shaman',
+		13	=> 'Warrior',
+		14	=> 'Wizard',
+		15	=> 'Cleric',
+		16	=> 'Druid',
 	),
 	'races' => array(
-		'Unknown',
-		'Gnome',
-		'Human',
-		'Barbarian',
-		'Dwarf',
-		'High Elf',
-		'Dark Elf',
-		'Wood Elf',
-		'Half Elf',
-		'Vah Shir',
-		'Troll',
-		'Ogre',
-		'Frog',
-		'Iksar',
-		'Erudite',
-		'Halfling',
-		'Drakkin' //note: see above
+		0	=> 'Unknown',
+		1	=> 'Gnome',
+		2	=> 'Human',
+		3	=> 'Barbarian',
+		4	=> 'Dwarf',
+		5	=> 'High Elf',
+		6	=> 'Dark Elf',
+		7	=> 'Wood Elf',
+		8	=> 'Half Elf',
+		9	=> 'Vah Shir',
+		10	=> 'Troll',
+		11	=> 'Ogre',
+		12	=> 'Frog',
+		13	=> 'Iksar',
+		14	=> 'Erudite',
+		15	=> 'Halfling',
+		16	=> 'Drakkin'
 	),
 	'factions' => array(
-		'Good',
-		'Evil'
+		'good'	=> 'Good',
+		'evil'	=> 'Evil'
 	),
 	'lang' => array(
-		'eq' => 'EverQuest',
-		'plate' => 'Plate',
-		'silk' => 'Silk',
-		'leather' => 'Leather',
-		'chain' => 'Chain',
+		'eq'				=> 'EverQuest',
+		'plate'				=> 'Plate',
+		'silk'				=> 'Silk',
+		'leather'			=> 'Leather',
+		'chain'				=> 'Chain',
 	),
 );
 
