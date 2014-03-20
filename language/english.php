@@ -60,8 +60,9 @@ $english_array = array(
 		16	=> 'Drakkin'
 	),
 	'factions' => array(
-		'good'	=> 'Good',
-		'evil'	=> 'Evil'
+		'neutral'	=> 'Neutral'
+		'good'		=> 'Good',
+		'evil'		=> 'Evil',
 	),
 	'lang' => array(
 		'eq'				=> 'EverQuest',
