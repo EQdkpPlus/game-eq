@@ -46,7 +46,7 @@ if(!class_exists('eq')) {
 				'decorate'	=> true,
 				'parent'	=> array(
 					'faction' => array(
-						'neutral'	=> array(1,8,9,14,16)
+						'neutral'	=> array(1,8,9,14,16),
 						'good'		=> array(2,3,4,5,7,12,15),
 						'evil'		=> array(6,10,11,12,13),
 					),
@@ -96,7 +96,7 @@ if(!class_exists('eq')) {
 		* @param bool $install
 		* @return array
 		*/
-		public function get_OnChangeInfos($install=false){
+		public function install($install=false){
 
 		}
 
