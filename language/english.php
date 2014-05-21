@@ -60,7 +60,7 @@ $english_array = array(
 		16	=> 'Drakkin'
 	),
 	'factions' => array(
-		'neutral'	=> 'Neutral'
+		'neutral'	=> 'Neutral',
 		'good'		=> 'Good',
 		'evil'		=> 'Evil',
 	),
