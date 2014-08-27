@@ -4,15 +4,14 @@
  * License:		Creative Commons - Attribution-Noncommercial-Share Alike 3.0 Unported
  * Link:		http://creativecommons.org/licenses/by-nc-sa/3.0/
  * -----------------------------------------------------------------------
- * Began:		2009
  * Date:		$Date$
  * -----------------------------------------------------------------------
  * @author		$Author$
- * @copyright	2006-2011 EQdkp-Plus Developer Team
+ * @copyright	2006-2014 EQdkp-Plus Developer Team
  * @link		http://eqdkp-plus.com
  * @package		eqdkp-plus
  * @version		$Rev$
- * 
+ *
  * $Id$
  */
 
@@ -22,14 +21,15 @@ if ( !defined('EQDKP_INC') ){
 
 if(!class_exists('eq')) {
 	class eq extends game_generic {
-		public $version			= '2.1.2';
-		protected $this_game	= 'eq';
-		protected $types		= array('classes', 'races', 'factions', 'filters');
-		protected $classes		= array();
-		protected $races		= array();
-		protected $factions		= array();
-		protected $filters		= array();
-		public $langs			= array('english');
+		protected static $apiLevel	= 20;
+		public $version				= '2.1.2';
+		protected $this_game		= 'eq';
+		protected $types			= array('classes', 'races', 'factions', 'filters');
+		protected $classes			= array();
+		protected $races			= array();
+		protected $factions			= array();
+		protected $filters			= array();
+		public $langs				= array('english');
 
 		protected $class_dependencies = array(
 			array(
@@ -90,21 +90,8 @@ if(!class_exists('eq')) {
 		protected $path			= '';
 		public  $lang			= false;
 
-		/**
-		* Returns Information to change the game
-		*
-		* @param bool $install
-		* @return array
-		*/
-		public function install($install=false){
+		public function install($install=false){}
 
-		}
-
-		/**
-		* Initialises filters
-		*
-		* @param array $langs
-		*/
 		protected function load_filters($langs){
 			if(!$this->classes) {
 				$this->load_type('classes', $langs);
