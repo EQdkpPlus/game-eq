@@ -65,11 +65,18 @@ $english_array = array(
 		'evil'		=> 'Evil',
 	),
 	'lang' => array(
-		'eq'				=> 'EverQuest',
-		'plate'				=> 'Plate',
-		'silk'				=> 'Silk',
-		'leather'			=> 'Leather',
-		'chain'				=> 'Chain',
+		'eq'						=> 'EverQuest',
+		'plate'						=> 'Plate',
+		'silk'						=> 'Silk',
+		'leather'					=> 'Leather',
+		'chain'						=> 'Chain',
+		'uc_race'					=> 'Race',
+		'uc_class'					=> 'Class',
+
+		// Admin Settings
+		'core_sett_fs_gamesettings'	=> 'EverQuest Settings',
+		'uc_faction'				=> 'Faction',
+		'uc_faction_help'			=> 'Select the default faction',
 	),
 );
 
