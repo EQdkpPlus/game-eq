@@ -22,7 +22,7 @@ if ( !defined('EQDKP_INC') ){
 if(!class_exists('eq')) {
 	class eq extends game_generic {
 		protected static $apiLevel	= 20;
-		public $version				= '2.1.2';
+		public $version				= '2.2.0';
 		protected $this_game		= 'eq';
 		protected $types			= array('classes', 'races', 'factions', 'filters');
 		protected $classes			= array();
