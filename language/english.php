@@ -59,11 +59,6 @@ $english_array = array(
 		15	=> 'Halfling',
 		16	=> 'Drakkin'
 	),
-	'factions' => array(
-		'neutral'	=> 'Neutral',
-		'good'		=> 'Good',
-		'evil'		=> 'Evil',
-	),
 	'lang' => array(
 		'eq'						=> 'EverQuest',
 		'plate'						=> 'Plate',
