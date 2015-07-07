@@ -22,7 +22,7 @@ if ( !defined('EQDKP_INC') ){
 if(!class_exists('eq')) {
 	class eq extends game_generic {
 		protected static $apiLevel	= 20;
-		public $version				= '2.2.2';
+		public $version				= '2.2.3';
 		protected $this_game		= 'eq';
 		protected $types			= array('classes', 'races', 'factions', 'filters');
 		protected $classes			= array();
@@ -95,6 +95,51 @@ if(!class_exists('eq')) {
 				);
 			}
 		}
+		//Guildbank
+		public function guildbank_money(){
+		return 	$money_data = array(
+		'platin'		=> array(
+			'icon'			=> array(
+				'type'		=> 'default',
+				'name'		=> 'platin'
+			),
+			'factor'		=> 1000,
+			'size'			=> 'unlimited',
+			'language'		=> $this->user->lang(array('gb_currency', 'platinum')),
+			'short_lang'	=> $this->user->lang(array('gb_currency', 'platinum_s')),
+		),
+		'gold'		=> array(
+			'icon'			=> array(
+				'type'		=> 'default',
+				'name'		=> 'gold'
+			),
+			'factor'		=> 100,
+			'size'			=> 1,
+			'language'		=> $this->user->lang(array('gb_currency', 'gold')),
+			'short_lang'	=> $this->user->lang(array('gb_currency', 'gold_s')),
+		),
+		'silver'	=> array(
+			'icon'			=> array(
+				'type'		=> 'default',
+				'name'		=> 'silver'
+			),
+			'factor'		=> 10,
+			'size'			=> 1,
+			'language'		=> $this->user->lang(array('gb_currency', 'silver')),
+			'short_lang'	=> $this->user->lang(array('gb_currency', 'silver_s')),
+		),
+		'copper'	=> array(
+			'icon'			=> array(
+				'type'		=> 'default',
+				'name'		=> 'bronze'
+			),
+			'factor'		=> 1,
+			'size'			=> 1,
+			'language'		=> $this->user->lang(array('gb_currency', 'copper')),
+			'short_lang'	=> $this->user->lang(array('gb_currency', 'copper_s')),
+		)
+		);
+	}
 	}
 }
 ?>
