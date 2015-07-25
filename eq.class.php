@@ -95,6 +95,40 @@ if(!class_exists('eq')) {
 				);
 			}
 		}
+
+		public function profilefields(){
+			// Category 'character' is a fixed one! All others are created dynamically!
+			$xml_fields = array(
+				'guild'	=> array(
+					'type'			=> 'text',
+					'category'		=> 'character',
+					'lang'			=> 'uc_guild',
+					'size'			=> 32,
+					'undeletable'	=> true,
+					'sort'			=> 1
+				),
+				'gender'	=> array(
+					'type'			=> 'dropdown',
+					'category'		=> 'character',
+					'lang'			=> 'uc_gender',
+					'options'		=> array('male' => 'uc_male', 'female' => 'uc_female'),
+					'tolang'		=> true,
+					'undeletable'	=> true,
+					'sort'			=> 3
+				),
+				'level'	=> array(
+					'type'			=> 'spinner',
+					'category'		=> 'character',
+					'lang'			=> 'uc_level',
+					'max'			=> 100,
+					'min'			=> 1,
+					'undeletable'	=> true,
+					'sort'			=> 4
+				),
+			);
+			return $xml_fields;
+		}
+
 		//Guildbank
 		public function guildbank_money(){
 		return 	$money_data = array(
