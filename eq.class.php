@@ -22,7 +22,7 @@ if ( !defined('EQDKP_INC') ){
 if(!class_exists('eq')) {
 	class eq extends game_generic {
 		protected static $apiLevel	= 20;
-		public $version				= '2.3.0';
+		public $version				= '2.3.1';
 		protected $this_game		= 'eq';
 		protected $types			= array('classes', 'races', 'factions', 'filters');
 		protected $classes			= array();
@@ -120,7 +120,7 @@ if(!class_exists('eq')) {
 					'type'			=> 'spinner',
 					'category'		=> 'character',
 					'lang'			=> 'uc_level',
-					'max'			=> 100,
+					'max'			=> 105,
 					'min'			=> 1,
 					'undeletable'	=> true,
 					'sort'			=> 4
