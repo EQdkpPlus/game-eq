@@ -137,7 +137,7 @@ if(!class_exists('eq')) {
 					'type'			=> 'spinner',
 					'category'		=> 'character',
 					'lang'			=> 'uc_level',
-					'max'			=> 105,
+					'max'			=> 110,
 					'min'			=> 1,
 					'undeletable'	=> true,
 					'sort'			=> 4
