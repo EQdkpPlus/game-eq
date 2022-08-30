@@ -100,10 +100,10 @@ if(!class_exists('zam')) {
 			$item['link'] = $url;
 			$itemdata = $this->puf->fetch($item['link'], array('Cookie: cookieLangId="'.$lang.'";'));
 
-			if (preg_match('#zamTooltip\.store\({\"icon\":\"(.*?)\",\"site\":\"(.*?)\",\"html\":\"(.*?)\",\"dataType\":\"(.*?)\",\"name\":\"(.*?)\",\"id\":\"(.*?)\"#', $itemdata, $matches)){
-
-				$content = stripslashes(str_replace('\n', '', $matches[3]));
-				if (preg_match('#pgfx\/(.*?)\.png\"#',stripslashes($matches[1]), $icon_matches)){
+			if (preg_match('#zamTooltip\.store\((.*?)\);#', $itemdata, $matches)){
+				$json_result = json_decode($matches[1], true);
+				$content = stripslashes(str_replace('\n', '', $json_result["html"]));
+				if (preg_match('#pgfx\/(.*?)\.png\"#',stripslashes($json_result['icon']), $icon_matches)){
 					$icon = $icon_matches[1];
 				}
 
@@ -112,7 +112,7 @@ if(!class_exists('zam')) {
 				$item['html'] = $template_html;
 				$item['lang'] = $lang;
 				$item['icon'] = $icon;
-				$item['name'] = $matches[5];
+				$item['name'] = $json_result['name'];
 			} else {
 				$item['baditem'] = true;
 			}
